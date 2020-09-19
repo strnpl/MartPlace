@@ -5,16 +5,18 @@
 
 // start header
 
-.header {
+.header__top {
     background-color: $bg;
     height: 100px;
 
-    &__inner {
+    &-inner {
         display: flex;
         justify-content: space-between;
         padding-top: 25px;
     }
+}
 
+.header {
     &__logo {
         a {
             display: flex;
@@ -41,7 +43,6 @@
     &__box-button {
         a {
             font-size: 14px;
-            font-weight: 400;
             color: #ffffff;
         }
 
@@ -101,8 +102,8 @@
 
 .user {
     &__inner {
-      display: flex; 
-      align-items: center;
+        display: flex;
+        align-items: center;
     }
 
     &__images {
@@ -115,7 +116,6 @@
 
     &__name {
         color: #333333;
-        font-size: 16px;
         font-weight: 500;
         line-height: 22px;
     }
@@ -123,8 +123,87 @@
     &__money {
         color: #0674ec;
         font-size: 15px;
-        font-weight: 400;
         line-height: 22px;
+    }
+}
+
+.header__menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+.menu {
+    &__list {
+        li {
+            display: inline-block;
+            text-transform: uppercase;
+
+            &+li {
+                margin-left: 30px;
+            }
+        }
+
+        a {
+            font-size: 15px;
+            line-height: 42px;
+            font-weight: 500;
+            color: #333333;
+        }
+    }
+}
+
+.header__search {
+    form {
+        max-width: 360px;
+        position: relative;
+
+        input {
+            display: block;
+            width: 100%;
+            height: 46px;
+            color: #333;
+            font-size: 15px;
+            border: 1px solid #d9dfe5;
+            border-radius: 23px;
+            padding-left: 25px;
+            padding-right: 90px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &::placeholder {
+            color: #898f96;
+            line-height: 30px;
+        }
+
+        button {
+            width: 70px;
+            height: 46px;
+            border-radius: 23px;
+            background-color: $blue;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            span {
+                color: #ffffff;
+
+                &::before {
+                    position: absolute;
+                    top: 17px;
+                    right: 27px;
+                }
+            }
+        }
+
+
     }
 }
 
