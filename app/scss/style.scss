@@ -1,9 +1,131 @@
-html {
-    box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+
+// start header
+
+.header {
+    background-color: $bg;
+    height: 100px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+    }
+
+    &__logo {
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__logo-text {
+        font-size: 30px;
+        color: $blue;
+        font-weight: 700;
+        padding-left: 6px;
+
+        span {
+            color: #000000;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__box-button {
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        display: inline-block;
+        padding: 10px 18px;
+        background-color: $blue;
+        border-radius: 18px;
+        margin-right: 50px;
+    }
 }
 
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
+.header__icon {
+    color: #7e8fa1;
+    font-size: 20px;
+    position: relative;
+
+    &+.header__icon {
+        margin-left: 30px;
+    }
+
+    span {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 21px;
+        right: -13px;
+        top: -16px;
+        font-size: 14px;
+        color: #ffffff;
+    }
 }
+
+.notifications {
+    span {
+        background-color: #ff6a6c;
+        width: 26px;
+        border-radius: 11px;
+    }
+
+}
+
+.messages {
+    span {
+        background-color: #62d03b;
+    }
+}
+
+.basket {
+    span {
+        background-color: $blue;
+    }
+
+    margin-right: 48px;
+}
+
+.user {
+    &__inner {
+      display: flex; 
+      align-items: center;
+    }
+
+    &__images {
+        margin-right: 22px;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    &__name {
+        color: #333333;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    &__money {
+        color: #0674ec;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+//end header
