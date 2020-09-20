@@ -270,7 +270,6 @@
 
     &__select {
         position: relative;
-        margin-bottom: 120px;
 
         &::before,
         &::after {
@@ -366,3 +365,43 @@ select {
 }
 
 //end search
+
+//start advantages 
+
+.advantages {
+    margin-top: 186px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+}
+
+.advantages__item {
+    width: 360px;
+    padding: 41px 35px 0;
+    transition: all .2s;
+
+    &:hover {
+        box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        background-color: #ffffff;
+    }
+
+    &-image {
+        margin-bottom: 35px;
+    }
+
+    &-title {
+        color: #010101;
+        font-size: 24px;
+        margin-bottom: 29px;
+    }
+
+    &-text {
+        margin-bottom: 50px;
+    }
+}
+
+//end advantages 
